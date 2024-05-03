@@ -41,7 +41,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <?php echo "Welcome back ". $_SESSION['login_name']."!"  ?>
+                    <?php echo "Welcome ". $_SESSION['login_name']."!"  ?>
                     <hr>
                     <div class="row">
                         <div class="col-md-4 mb-3">
@@ -52,7 +52,7 @@
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM houses")->num_rows ?>
                                         </b></h4>
-                                        <p><b>Total Houses</b></p>
+                                        <p><b> Rooms </b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">
@@ -72,7 +72,7 @@
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM tenants where status = 1 ")->num_rows ?>
                                         </b></h4>
-                                        <p><b>Total Tenants</b></p>
+                                        <p><b>Tenants</b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">
@@ -95,7 +95,7 @@
                                              echo $payment->num_rows > 0 ? number_format($payment->fetch_array()['paid'],2) : 0;
                                              ?>
                                         </b></h4>
-                                        <p><b>Payments This Month</b></p>
+                                        <p><b>Payments </b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">

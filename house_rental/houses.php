@@ -9,13 +9,13 @@
 			<form action="" id="manage-house">
 				<div class="card">
 					<div class="card-header">
-						    House Form
+						    Room Form
 				  	</div>
 					<div class="card-body">
 							<div class="form-group" id="msg"></div>
 							<input type="hidden" name="id">
 							<div class="form-group">
-								<label class="control-label">House No</label>
+								<label class="control-label">Room No</label>
 								<input type="text" class="form-control" name="house_no" required="">
 							</div>
 							<div class="form-group">
@@ -45,8 +45,8 @@
 					<div class="card-footer">
 						<div class="row">
 							<div class="col-md-12">
-								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
-								<button class="btn btn-sm btn-default col-sm-3" type="reset" > Cancel</button>
+								<button class="btn btn-sm btn-primary col-sm-4 offset-md-3"> Save</button>
+								<button class="btn btn-sm btn-primary col-sm-4" type="reset" > Cancel</button>
 							</div>
 						</div>
 					</div>
@@ -59,14 +59,14 @@
 			<div class="col-md-8">
 				<div class="card">
 					<div class="card-header">
-						<b>House List</b>
+						<b>Room List</b>
 					</div>
 					<div class="card-body">
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="text-center">House</th>
+									<th class="text-center">Room</th>
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
@@ -80,7 +80,7 @@
 									<td class="text-center"><?php echo $i++ ?></td>
 									<td class="">
 										<p>House #: <b><?php echo $row['house_no'] ?></b></p>
-										<p><small>House Type: <b><?php echo $row['cname'] ?></b></small></p>
+										<p><small>Room Type: <b><?php echo $row['cname'] ?></b></small></p>
 										<p><small>Description: <b><?php echo $row['description'] ?></b></small></p>
 										<p><small>Price: <b><?php echo number_format($row['price'],2) ?></b></small></p>
 									</td>
@@ -136,7 +136,7 @@
 
 				}
 				else if(resp==2){
-					$('#msg').html('<div class="alert alert-danger">House number already exist.</div>')
+					$('#msg').html('<div class="alert alert-danger">Room number already exist.</div>')
 					end_load()
 				}
 			}
